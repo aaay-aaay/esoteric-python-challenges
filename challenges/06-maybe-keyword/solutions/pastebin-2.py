@@ -9,7 +9,7 @@ from random import *
 class PatchedLocals(dict):
     __getitem__ = FunctionType(CodeType(
         2, 0, 2, 10, 0, b'd\0\x83\0j\0d\1\x19\0d\2k\2r\x1cd\5d\3d\4\x83\1\x83\1S\0d\6j\1d\0\x83\0j\0d\7\x19\0d\0\x83\0j\0d\1\x19\0\x83\2S\0', (_getframe, 'item', 'Maybe', getrandbits, 1, bool, dict, 'self'),
-        ('f_locals', '__getitem__'), ('self', 'item'), __file__, '__getitem__', 7, b'', (), ('__class__',)
+        ('f_locals', '__getitem__'), ('self', 'item'), __file__, '__getitem__', 7, b'', (), ()
     ), {})
     def __setitem__(self, item, value):
         if item == 'Maybe':
